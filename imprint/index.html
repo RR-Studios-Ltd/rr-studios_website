@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint — RR Studios Ltd</title>
+    <meta name="description" content="Provider identification and legal information for RR Studios Ltd.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://rr-studios.co/imprint">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://rr-studios.co/imprint">
+    <link rel="alternate" hreflang="de" href="https://rr-studios.co/de/impressum">
+    <link rel="alternate" hreflang="x-default" href="https://rr-studios.co/imprint">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="../index.html" class="nav-logo">RR Studios Ltd</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    Products <span class="dropdown-arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="https://mr-fridge.rr-studios.co/en" role="menuitem">
+                        <img src="../assets/mr-fridge-icon.png" alt="" class="product-icon" width="24" height="24" loading="lazy">
+                        Mr. Fridge
+                    </a>
+                </div>
+            </li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li class="dropdown lang-dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    EN <span class="dropdown-arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="index.html" role="menuitem" class="active">English</a>
+                    <a href="../de/impressum/index.html" role="menuitem">Deutsch</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="imprint" aria-label="Imprint">
+            <h1>Imprint</h1>
+
+            <h2>Provider Identification according to &sect; 5 TMG</h2>
+            <p>
+                RR Studios Ltd<br>
+                20 Wenlock Road<br>
+                N1 7GU<br>
+                London, England
+            </p>
+            <p>Director: Romy Richter</p>
+
+            <h2>Commercial Register</h2>
+            <p>
+                Registered in England and Wales<br>
+                Companies House No. 17005675
+            </p>
+
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:contact@rr-studios.co">contact@rr-studios.co</a></p>
+            <p>Phone: <a href="tel:+4407500139535">+44 07500 139535</a></p>
+
+            <h2>Disclaimer</h2>
+            <p>Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.</p>
+
+            <h2>Online Dispute Resolution</h2>
+            <p>The European Commission provides a platform for consumer redress: <a href="https://consumer-redress.ec.europa.eu" target="_blank" rel="noopener noreferrer">https://consumer-redress.ec.europa.eu</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <span>&copy; 2026 RR Studios Ltd. All rights reserved.</span>
+        <a href="index.html">Imprint</a>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+                toggle.setAttribute('aria-expanded', String(!expanded));
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — RR Studios Ltd</title>
+    <meta name="description" content="Anbieterkennzeichnung und rechtliche Informationen der RR Studios Ltd.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://rr-studios.co/de/impressum">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://rr-studios.co/imprint">
+    <link rel="alternate" hreflang="de" href="https://rr-studios.co/de/impressum">
+    <link rel="alternate" hreflang="x-default" href="https://rr-studios.co/imprint">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+    <nav role="navigation" aria-label="Hauptnavigation">
+        <a href="../index.html" class="nav-logo">RR Studios Ltd</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    Produkte <span class="dropdown-arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="https://mr-fridge.rr-studios.co/de" role="menuitem">
+                        <img src="../../assets/mr-fridge-icon.png" alt="" class="product-icon" width="24" height="24" loading="lazy">
+                        Mr. Fridge
+                    </a>
+                </div>
+            </li>
+            <li><a href="../index.html#kontakt">Kontakt</a></li>
+            <li class="dropdown lang-dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    DE <span class="dropdown-arrow">&#9660;</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="../../imprint/index.html" role="menuitem">English</a>
+                    <a href="index.html" role="menuitem" class="active">Deutsch</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="imprint" aria-label="Impressum">
+            <h1>Impressum</h1>
+
+            <h2>Anbieterkennzeichnung gem&auml;&szlig; &sect; 5 TMG</h2>
+            <p>
+                RR Studios Ltd<br>
+                20 Wenlock Road<br>
+                N1 7GU<br>
+                London, England
+            </p>
+            <p>Gesch&auml;ftsf&uuml;hrerin: Romy Richter</p>
+
+            <h2>Registereintrag</h2>
+            <p>
+                Eingetragen in England und Wales<br>
+                Companies House Nr. 17005675
+            </p>
+
+            <h2>Kontakt</h2>
+            <p>E-Mail: <a href="mailto:contact@rr-studios.co">contact@rr-studios.co</a></p>
+            <p>Telefon: <a href="tel:+4407500139535">+44 07500 139535</a></p>
+
+            <h2>Haftungsausschluss</h2>
+            <p>Trotz sorgf&auml;ltiger inhaltlicher Kontrolle &uuml;bernehmen wir keine Haftung f&uuml;r die Inhalte externer Links. F&uuml;r den Inhalt der verlinkten Seiten sind ausschlie&szlig;lich deren Betreiber verantwortlich.</p>
+
+            <h2>Online-Streitbeilegung</h2>
+            <p>Die Europ&auml;ische Kommission stellt eine Plattform f&uuml;r Verbraucherrechtsbehelfe bereit: <a href="https://consumer-redress.ec.europa.eu" target="_blank" rel="noopener noreferrer">https://consumer-redress.ec.europa.eu</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <span>&copy; 2026 RR Studios Ltd. Alle Rechte vorbehalten.</span>
+        <a href="index.html">Impressum</a>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+                toggle.setAttribute('aria-expanded', String(!expanded));
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+            }
+        });
+    </script>
+</body>
+</html>

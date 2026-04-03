@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR Studios Ltd — Mobile App Design & Development</title>
+    <meta name="description" content="RR Studios Ltd designs and develops mobile applications — from our own products on the App Store to custom-built solutions for businesses and individuals.">
+    <meta name="keywords" content="mobile app development, custom software, iOS apps, Android apps, app design, RR Studios">
+    <meta name="author" content="RR Studios Ltd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rr-studios.co">
+ 
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://rr-studios.co">
+    <link rel="alternate" hreflang="de" href="https://rr-studios.co/de">
+    <link rel="alternate" hreflang="x-default" href="https://rr-studios.co">
+ 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RR Studios Ltd — Mobile App Design & Development">
+    <meta property="og:description" content="We design and develop mobile applications — from our own App Store products to custom-built solutions for businesses and individuals.">
+    <meta property="og:url" content="https://rr-studios.co">
+    <meta property="og:site_name" content="RR Studios Ltd">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="de_DE">
+ 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RR Studios Ltd — Mobile App Design & Development">
+    <meta name="twitter:description" content="We design and develop mobile applications — from our own App Store products to custom-built solutions for businesses and individuals.">
+ 
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RR Studios Ltd",
+        "url": "https://rr-studios.co",
+        "email": "contact@rr-studios.co",
+        "description": "RR Studios Ltd designs and develops mobile applications — from our own products on the App Store to custom-built solutions for businesses and individuals.",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@rr-studios.co",
+            "contactType": "customer support",
+            "availableLanguage": ["English", "German"]
+        }
+    }
+    </script>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav-logo">RR Studios Ltd</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    Products <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="index.html" role="menuitem">
+                        <img src="assets/mr-fridge-icon.png" alt="" class="product-icon" width="24" height="24" loading="lazy">
+                        Mr. Fridge
+                    </a>
+                </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown lang-dropdown">
+                <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                    EN <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                    <a href="index.html" role="menuitem" class="active">English</a>
+                    <a href="de/index.html" role="menuitem">Deutsch</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+ 
+    <main>
+        <section class="hero" aria-label="Introduction">
+            <h1 class="sr-only">RR Studios Ltd — Mobile App Design & Development</h1>
+            <p class="hero-tagline">
+                RR Studios Ltd designs and develops mobile applications –
+                from our own products on the App Store to custom&#8209;built
+                solutions for businesses and individuals.
+            </p>
+            <div class="cards">
+                <article class="card">
+                    <h2>Our Apps</h2>
+                    <p>We design, implement, and publish our own portfolio of mobile apps, each created to solve real problems and make every day life a little easier.</p>
+                </article>
+                <article class="card">
+                    <h2>Custom Development</h2>
+                    <p>Got an idea? We can help bring it to life. From UI design to backend architecture, we can build tailored solutions for businesses and individuals.</p>
+                </article>
+            </div>
+        </section>
+ 
+        <section class="contact" id="contact" aria-label="Contact information">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>RR Studios Ltd</p>
+                <p><a href="mailto:contact@rr-studios.co">contact@rr-studios.co</a></p>
+            </div>
+        </section>
+    </main>
+ 
+    <footer>
+        <span>&copy; 2026 RR Studios Ltd. All rights reserved.</span>
+        <a href="imprint/index.html">Imprint</a>
+    </footer>
+ 
+    <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+                toggle.setAttribute('aria-expanded', String(!expanded));
+            });
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-toggle').forEach(t => t.setAttribute('aria-expanded', 'false'));
+            }
+        });
+    </script>
+</body>
+</html>
